@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishnu Reddy — Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Guntaka Nilakanta Vishnu Vardhan Reddy (Vishnu Reddy), B.Tech IT Student & Aspiring Software Engineer specializing in Java Full-Stack, AI/ML, and Cloud Computing." />
+  <meta name="author" content="Vishnu Reddy" />
+  <meta name="keywords" content="Vishnu Reddy, Software Engineer, Portfolio, Full-Stack Developer, AI/ML, Spring Boot, React, Vijayawada" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet Link -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Embedded Complete Custom Theme CSS -->
+  <style>
+/* ==========================================================================
+   VISHNU REDDY — PERSONAL PORTFOLIO STYLES
+   Color Palette: Deep Navy (#0f172a, #0b1329), Off-White (#f8fafc), Teal (#0d9488, #14b8a6)
+   Typography: Plus Jakarta Sans, JetBrains Mono
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-dark: #0b1329;
+  --bg-navy: #0f172a;
+  --bg-navy-card: #1e293b;
+
+  /* Accent Colors (Teal) */
+  --teal-primary: #0d9488;
+  --teal-light: #14b8a6;
+  --teal-subtle: #ccfbf1;
+  --teal-bg: #f0fdfa;
+  --teal-border: #99f6e4;
+  --teal-dark: #0f766e;
+
+  /* Neutral Text Colors */
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+
+  /* Borders & Shadows */
+  --border-light: #e2e8f0;
+  --border-dark: #1e293b;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+
+  /* Layout */
+  --header-height: 76px;
+  --max-width: 1140px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-body);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-teal {
+  color: var(--teal-primary);
+}
+
+.badge-teal {
+  background-color: var(--teal-subtle);
+  color: var(--teal-dark);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* Header & Nav */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow-sm);
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--bg-navy);
+}
+
+.logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--bg-navy) 0%, #1e293b 100%);
+  color: var(--teal-light);
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: 8px;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.logo-text span {
+  color: var(--teal-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-body);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--teal-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--teal-primary);
+  transition: width var(--transition-normal);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.btn-nav {
+  padding: 8px 18px;
+  background-color: var(--bg-navy);
+  color: var(--text-white) !important;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-nav::after {
+  display: none;
+}
+
+.btn-nav:hover {
+  background-color: var(--teal-primary);
+  transform: translateY(-1px);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  z-index: 1001;
+}
+
+.nav-toggle .bar {
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--bg-navy);
+  border-radius: 2px;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero {
+  padding: 72px 0 88px;
+  background: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.06) 0%, transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(15, 23, 42, 0.03) 0%, transparent 40%);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--teal-bg);
+  color: var(--teal-dark);
+  border: 1px solid var(--teal-border);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--teal-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(13, 148, 136, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+}
+
+.role-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background-color: #f1f5f9;
+  color: var(--bg-navy);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--bg-navy);
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hero-intro {
+  font-size: 1.125rem;
+  color: var(--text-body);
+  margin-bottom: 32px;
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 24px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--bg-navy);
+  line-height: 1.2;
+}
+
+.stat-max {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background-color: var(--border-light);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--bg-navy);
+  color: var(--text-white);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: var(--teal-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 148, 136, 0.25);
+}
+
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--bg-navy);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  border-color: var(--teal-primary);
+  color: var(--teal-primary);
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-card {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  background: linear-gradient(145deg, var(--bg-navy) 0%, #1e293b 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.avatar-ring {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--teal-light) 0%, var(--teal-primary) 100%);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+}
+
+.avatar-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-initials {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--teal-light);
+}
+
+.avatar-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.avatar-title {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.avatar-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mini-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  color: var(--teal-light);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  background: rgba(20, 184, 166, 0.15);
+  filter: blur(40px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Section Layouts */
+.section {
+  padding: 96px 0;
+}
+
+.section-light {
+  background-color: var(--bg-primary);
+}
+
+.section-alt {
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal-primary);
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+  font-weight: 800;
+  color: var(--bg-navy);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  max-width: 680px;
+}
+
+.section-line {
+  width: 50px;
+  height: 3px;
+  background-color: var(--teal-primary);
+  margin-top: 16px;
+  border-radius: 2px;
+}
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.about-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bg-navy);
+  margin-bottom: 16px;
+}
+
+.main-about p {
+  color: var(--text-body);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.highlight-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.highlight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  background-color: var(--teal-bg);
+  color: var(--teal-primary);
+  border-radius: 8px;
+  border: 1px solid var(--teal-border);
+}
+
+.highlight-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--bg-navy);
+  margin-bottom: 2px;
+}
+
+.highlight-item p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.quick-info {
+  background-color: var(--bg-navy);
+  color: var(--text-white);
+  border-color: var(--border-dark);
+}
+
+.quick-info .about-heading {
+  color: var(--text-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.info-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--teal-border);
+}
+
+.project-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.status-badge.ongoing {
+  background-color: var(--teal-bg);
+  color: var(--teal-dark);
+  border: 1px solid var(--teal-border);
+}
+
+.status-badge.completed {
+  background-color: #f1f5f9;
+  color: var(--bg-navy);
+  border: 1px solid var(--border-light);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--teal-primary);
+  border-radius: 50%;
+}
+
+.category-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bg-navy);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-features {
+  margin-bottom: 24px;
+  background-color: var(--bg-primary);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.features-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bg-navy);
+  margin-bottom: 10px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.features-list li {
+  font-size: 0.875rem;
+  color: var(--text-body);
+  position: relative;
+  padding-left: 16px;
+}
+
+.features-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--teal-primary);
+}
+
+.metrics-container {
+  margin-bottom: 24px;
+  background-color: var(--bg-navy);
+  color: var(--text-white);
+  padding: 16px;
+  border-radius: var(--radius-md);
+}
+
+.metrics-container .features-title {
+  color: var(--teal-light);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-num {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--teal-light);
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: 0.725rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.tech-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  background-color: var(--bg-tertiary);
+  color: var(--bg-navy);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+/* Skills Section */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.skill-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--teal-bg);
+  color: var(--teal-primary);
+  border-radius: 8px;
+  border: 1px solid var(--teal-border);
+}
+
+.skill-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bg-navy);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  background-color: var(--bg-primary);
+  color: var(--bg-navy);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.skill-chip:hover {
+  background-color: var(--teal-bg);
+  border-color: var(--teal-border);
+  color: var(--teal-dark);
+}
+
+/* Timeline / Experience Section */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background-color: var(--border-light);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 24px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 4px solid var(--teal-primary);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
+}
+
+.timeline-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal);
+}
+
+.timeline-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.timeline-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bg-navy);
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--teal-primary);
+  display: block;
+  margin-top: 2px;
+}
+
+.timeline-duration {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-body);
+  border-radius: var(--radius-full);
+}
+
+.timeline-body p {
+  color: var(--text-body);
+  margin-bottom: 12px;
+}
+
+.timeline-points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.timeline-points li {
+  font-size: 0.925rem;
+  color: var(--text-body);
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-points li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: var(--teal-primary);
+  font-weight: 800;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-tags span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  background-color: var(--bg-primary);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+/* Education Section */
+.education-card {
+  display: flex;
+  gap: 32px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  align-items: flex-start;
+}
+
+.edu-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--bg-navy);
+  color: var(--teal-light);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.edu-details-col {
+  flex: 1;
+}
+
+.edu-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.edu-years {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.cgpa-pill {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  background-color: var(--teal-subtle);
+  color: var(--teal-dark);
+  border-radius: var(--radius-full);
+}
+
+.edu-degree {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--bg-navy);
+  margin-bottom: 4px;
+}
+
+.edu-college {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--teal-primary);
+  margin-bottom: 2px;
+}
+
+.edu-location {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.edu-highlights {
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+
+/* Certifications Section */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal-border);
+}
+
+.cert-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--teal-bg);
+  color: var(--teal-primary);
+  border-radius: 10px;
+  border: 1px solid var(--teal-border);
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bg-navy);
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.cert-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  background-color: var(--bg-tertiary);
+  color: var(--bg-navy);
+  border-radius: var(--radius-sm);
+}
+
+/* Contact Section */
+.contact-card-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--bg-navy);
+  color: var(--text-white);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.contact-header .section-tag {
+  color: var(--teal-light);
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 12px;
+}
+
+.contact-lead {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  color: var(--text-white);
+  position: relative;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--teal-light);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(20, 184, 166, 0.15);
+  color: var(--teal-light);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+.contact-detail {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copy-btn {
+  color: var(--text-light);
+  padding: 6px;
+  border-radius: 6px;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.copy-btn:hover {
+  color: var(--teal-light);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.location-item {
+  cursor: default;
+}
+
+.contact-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--bg-navy);
+  color: var(--teal-light);
+  border: 1px solid var(--teal-border);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  z-index: 2000;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--bg-navy);
+  color: var(--text-light);
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-white);
+}
+
+.footer-logo span {
+  color: var(--teal-light);
+}
+
+.footer-sub {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--teal-light);
+  margin-bottom: 4px;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-visual {
+    order: -1;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-lg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+  }
+  .nav-menu.open {
+    max-height: 400px;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 16px 24px;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-link {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .nav-link::after {
+    display: none;
+  }
+  .btn-nav {
+    display: inline-block;
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .stat-divider {
+    width: 100%;
+    height: 1px;
+  }
+  .education-card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+  }
+  .timeline::before {
+    left: 14px;
+  }
+  .timeline-item {
+    padding-left: 40px;
+  }
+  .timeline-marker {
+    left: 6px;
+  }
+  .contact-card-wrapper {
+    padding: 36px 24px;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-right {
+    text-align: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="logo" aria-label="Vishnu Reddy Home">
+        <span class="logo-badge">VR</span>
+        <span class="logo-text">Vishnu<span>Reddy</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link btn-nav">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge-group">
+            <span class="status-pill"><span class="pulse-dot"></span> B.Tech IT Student</span>
+            <span class="role-pill">Software Engineer in the Making</span>
+          </div>
+
+          <h1 class="hero-title">
+            Building useful systems with <span class="text-teal">code</span> &amp; <span class="text-teal">curiosity</span>.
+          </h1>
+
+          <p class="hero-intro">
+            I’m <strong>Vishnu Reddy</strong> (Guntaka Nilakanta Vishnu Vardhan Reddy), a B.Tech Information Technology student focused on Java full-stack development, artificial intelligence, machine learning, and cloud computing.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-value">8.84 <span class="stat-max">/ 10</span></div>
+              <div class="stat-label">Academic CGPA</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <div class="stat-value">2027</div>
+              <div class="stat-label">Expected Graduation</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <div class="stat-value">Vijayawada</div>
+              <div class="stat-label">Andhra Pradesh, India</div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="avatar-ring">
+              <div class="avatar-inner">
+                <span class="avatar-initials">VR</span>
+              </div>
+            </div>
+            <div class="avatar-details">
+              <h3 class="avatar-name">Vishnu Reddy</h3>
+              <p class="avatar-title">Full-Stack &amp; AI Developer</p>
+              <div class="avatar-tags">
+                <span class="mini-tag">Java</span>
+                <span class="mini-tag">Spring Boot</span>
+                <span class="mini-tag">React</span>
+                <span class="mini-tag">Python AI</span>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Background</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-about">
+            <h3 class="about-heading">Passionate Engineer &amp; Continuous Learner</h3>
+            <p>
+              I am an ambitious Information Technology undergraduate at <strong>Lakireddy Bali Reddy College of Engineering</strong> with a strong drive for engineering robust, real-world software solutions. My core technical focus spans end-to-end full-stack development, machine learning algorithms, and intelligent cloud systems.
+            </p>
+            <p>
+              I thrive on building <strong>scalable software</strong>, architecting efficient <strong>backend systems</strong> with Java and Spring Boot, crafting <strong>responsive interfaces</strong> using React, and integrating <strong>AI-driven applications</strong> to solve complex, everyday challenges.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div>
+                  <strong>Full-Stack Architecture</strong>
+                  <p>Building secure, scalable enterprise backends &amp; clean web frontend UIs.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <div>
+                  <strong>Artificial Intelligence &amp; ML</strong>
+                  <p>Predictive modeling, computer vision with OpenCV, and pattern detection.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <div>
+                  <strong>Cloud &amp; DevOps Fundamentals</strong>
+                  <p>Certified in AWS Cloud Practitioner, containerizing applications with Docker &amp; K8s.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card quick-info">
+            <h3 class="about-heading">Quick Info</h3>
+            <ul class="info-list">
+              <li>
+                <span class="info-label">Full Name:</span>
+                <span class="info-value">Guntaka Nilakanta Vishnu Vardhan Reddy</span>
+              </li>
+              <li>
+                <span class="info-label">Preferred Name:</span>
+                <span class="info-value">Vishnu Reddy</span>
+              </li>
+              <li>
+                <span class="info-label">Degree:</span>
+                <span class="info-value">B.Tech Information Technology</span>
+              </li>
+              <li>
+                <span class="info-label">Institution:</span>
+                <span class="info-value">Lakireddy Bali Reddy College of Engineering</span>
+              </li>
+              <li>
+                <span class="info-label">CGPA:</span>
+                <span class="info-value badge-teal">8.84 / 10.00</span>
+              </li>
+              <li>
+                <span class="info-label">Graduation Year:</span>
+                <span class="info-value">2027</span>
+              </li>
+              <li>
+                <span class="info-label">Location:</span>
+                <span class="info-value">Vijayawada, Andhra Pradesh</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications spanning AI investigation tools, full-stack enterprise platforms, and machine learning models.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card featured-project">
+            <div class="project-header">
+              <div class="project-badge-row">
+                <span class="status-badge ongoing"><span class="badge-dot"></span> Ongoing Project</span>
+                <span class="category-badge">AI / Full-Stack</span>
+              </div>
+              <h3 class="project-title">CrimeVision – AI Crime Investigation System</h3>
+            </div>
+            <div class="project-content">
+              <p class="project-description">
+                An intelligent, end-to-end AI-powered platform tailored for law enforcement case management and evidence analysis. CrimeVision streamlines crime investigation by integrating automated facial recognition, suspect profiling, and crime pattern analytics.
+              </p>
+              
+              <div class="project-features">
+                <h4 class="features-title">Key Capabilities:</h4>
+                <ul class="features-list">
+                  <li>Automated evidence management &amp; suspect profiling</li>
+                  <li>Facial recognition &amp; computer vision using OpenCV</li>
+                  <li>Crime pattern analysis with NLP &amp; machine learning</li>
+                  <li>Role-based access control &amp; automated investigative reporting</li>
+                  <li>Interactive real-time analytics dashboard</li>
+                </ul>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">OpenCV</span>
+                <span class="tech-pill">Machine Learning</span>
+                <span class="tech-pill">NLP</span>
+                <span class="tech-pill">REST APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-badge-row">
+                <span class="status-badge completed">Full-Stack Application</span>
+                <span class="category-badge">Web System</span>
+              </div>
+              <h3 class="project-title">LBRCE Canteen Management System</h3>
+            </div>
+            <div class="project-content">
+              <p class="project-description">
+                A comprehensive digital web solution designed to modernize campus dining operations at Lakireddy Bali Reddy College of Engineering. Eliminates long queues and optimizes kitchen inventory management.
+              </p>
+              
+              <div class="project-features">
+                <h4 class="features-title">Key Capabilities:</h4>
+                <ul class="features-list">
+                  <li>Secure multi-role authentication (Student, Staff, Admin)</li>
+                  <li>Real-time order management &amp; automated digital billing</li>
+                  <li>Inventory tracking &amp; instant stock announcements</li>
+                  <li>Full CRUD operations &amp; responsive modern UI</li>
+                  <li>Analytics dashboard for daily sales &amp; order trends</li>
+                </ul>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">REST APIs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-badge-row">
+                <span class="status-badge completed">Machine Learning</span>
+                <span class="category-badge">FinTech / Security</span>
+              </div>
+              <h3 class="project-title">Online Payment Fraud Detection System</h3>
+            </div>
+            <div class="project-content">
+              <p class="project-description">
+                An advanced predictive machine learning system developed to identify fraudulent financial transactions in real time through deep transaction pattern analysis, data preprocessing, and algorithm optimization.
+              </p>
+
+              <!-- Metrics Grid -->
+              <div class="metrics-container">
+                <h4 class="features-title">Model Performance Metrics:</h4>
+                <div class="metrics-grid">
+                  <div class="metric-box">
+                    <span class="metric-num">99.9%</span>
+                    <span class="metric-label">Accuracy</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-num">94.2%</span>
+                    <span class="metric-label">Precision</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-num">91.5%</span>
+                    <span class="metric-label">Recall</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-num">0.92</span>
+                    <span class="metric-label">F1-Score</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Scikit-Learn</span>
+                <span class="tech-pill">Pandas</span>
+                <span class="tech-pill">NumPy</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; Expertise</h2>
+          <p class="section-subtitle">Core technical stack and domains of knowledge acquired through academic coursework, internships, and project development.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-wrapper">
+          <!-- Skill Category 1 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 class="skill-card-title">Languages &amp; Web</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">React.js</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <h3 class="skill-card-title">Backend &amp; Data</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-chip">Spring Boot</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">OOP</span>
+              <span class="skill-chip">Data Structures &amp; Algorithms</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              </div>
+              <h3 class="skill-card-title">AI &amp; Machine Learning</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-chip">Scikit-Learn</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">NumPy</span>
+              <span class="skill-chip">OpenCV</span>
+              <span class="skill-chip">NLP</span>
+              <span class="skill-chip">Machine Learning</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3 class="skill-card-title">Cloud &amp; DevOps</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-chip">AWS Cloud Practitioner</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Kubernetes</span>
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+              <span class="skill-chip">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 5 -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h3 class="skill-card-title">Core CS</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-chip">Operating Systems</span>
+              <span class="skill-chip">DBMS</span>
+              <span class="skill-chip">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Work History</span>
+          <h2 class="section-title">Internship Experience</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Machine Learning Intern</h3>
+                  <span class="timeline-company">Plasmid Networks</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-duration">2026 • 2 Months</span>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p>
+                  Developed an online payment fraud detection system; worked on preprocessing, feature engineering, model evaluation, and documentation.
+                </p>
+                <ul class="timeline-points">
+                  <li>Performed comprehensive transaction data preprocessing, handling skewed distribution and missing metrics.</li>
+                  <li>Engineered custom feature sets to isolate anomalous fraud patterns in payment activity.</li>
+                  <li>Evaluated ML classification models achieving 99.9% accuracy, 94.2% precision, and 91.5% recall (0.92 F1-score).</li>
+                  <li>Authored technical project documentation and performance analysis reports.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span>Python</span>
+                  <span>Scikit-Learn</span>
+                  <span>Pandas</span>
+                  <span>Feature Engineering</span>
+                  <span>Model Evaluation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">IoT Intern</h3>
+                  <span class="timeline-company">Shikara Solutions</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-duration">2025 • 8 Weeks</span>
+                </div>
+              </div>
+              <div class="timeline-body">
+                <p>
+                  Contributed to smart home automation, sensor integration, real-time monitoring, and automated alarm/security notifications.
+                </p>
+                <ul class="timeline-points">
+                  <li>Integrated multi-sensor hardware arrays for real-time telemetry and environmental tracking.</li>
+                  <li>Developed automated notification triggers for immediate security alert escalation.</li>
+                  <li>Tested communication protocols ensuring low-latency state synchronization in smart home nodes.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span>IoT Systems</span>
+                  <span>Sensor Integration</span>
+                  <span>Real-Time Monitoring</span>
+                  <span>Security Notifications</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="education-card">
+          <div class="edu-icon-col">
+            <div class="edu-badge-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+          </div>
+          <div class="edu-details-col">
+            <div class="edu-meta-top">
+              <span class="edu-years">Expected Graduation: 2027</span>
+              <span class="cgpa-pill">CGPA: 8.84 / 10.00</span>
+            </div>
+            <h3 class="edu-degree">B.Tech in Information Technology</h3>
+            <h4 class="edu-college">Lakireddy Bali Reddy College of Engineering</h4>
+            <p class="edu-location">Andhra Pradesh, India</p>
+            
+            <div class="edu-highlights">
+              <p>Specializing in Java Full-Stack Development, Data Structures &amp; Algorithms, Artificial Intelligence, Database Management, and Cloud Systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Verified certifications in Generative AI, Data Science, Cloud Computing, and Professional Development.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Oracle Generative AI Professional</h3>
+              <p class="cert-issuer">Oracle</p>
+              <span class="cert-badge">AI Professional</span>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Oracle Data Science Professional</h3>
+              <p class="cert-issuer">Oracle</p>
+              <span class="cert-badge">Data Science</span>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
+              <p class="cert-issuer">Amazon Web Services (AWS)</p>
+              <span class="cert-badge">Cloud Practitioner</span>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">LSWR Certification</h3>
+              <p class="cert-issuer">Technical Competency</p>
+              <span class="cert-badge">Certified Skill</span>
+            </div>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 1 0 3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="cert-content">
+              <h3 class="cert-title">Personality Development &amp; Behavioral Skills Certification</h3>
+              <p class="cert-issuer">Professional Development</p>
+              <span class="cert-badge">Soft Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-light">
+      <div class="container">
+        <div class="contact-card-wrapper">
+          <div class="contact-header">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-lead">
+              I’m currently seeking opportunities in software engineering, full-stack development, and AI/ML. Whether you have a question, project inquiry, or potential role, feel free to connect!
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Email -->
+            <a href="mailto:vishnureddy1401@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-type">Email</span>
+                <span class="contact-detail">vishnureddy1401@gmail.com</span>
+              </div>
+              <button class="copy-btn" data-copy="vishnureddy1401@gmail.com" title="Copy Email" aria-label="Copy Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+916305049766" class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-type">Phone</span>
+                <span class="contact-detail">+91 6305049766</span>
+              </div>
+              <button class="copy-btn" data-copy="+916305049766" title="Copy Phone Number" aria-label="Copy Phone Number">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/vishnu-reddy0007" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.58a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-type">LinkedIn</span>
+                <span class="contact-detail">https://www.linkedin.com/in/vishnu-reddy0007</span>
+              </div>
+              <div class="contact-arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="contact-item location-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-type">Location</span>
+                <span class="contact-detail">Vijayawada, Andhra Pradesh</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-cta">
+            <a href="mailto:vishnureddy1401@gmail.com" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">Vishnu<span>Reddy</span></a>
+        <p class="footer-sub">Software Engineer in the Making • B.Tech Information Technology</p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Vijayawada, Andhra Pradesh
+        </p>
+        <p class="footer-copy">&copy; <span id="year">2026</span> Guntaka Nilakanta Vishnu Vardhan Reddy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Alert -->
+  <div id="toast" class="toast" role="status" aria-live="polite">Copied to clipboard!</div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
