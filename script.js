@@ -68,24 +68,290 @@
     });
   }
 
-  // Mobile Navigation Menu Toggle
+  // Mobile Navigation Menu Toggle with Backdrop Overlay
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function closeMobileNav() {
+    if (navMenu) navMenu.classList.remove('open');
+    if (navToggle) {
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    if (navOverlay) navOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openMobileNav() {
+    if (navMenu) navMenu.classList.add('open');
+    if (navToggle) {
+      navToggle.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+    }
+    if (navOverlay) navOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('open');
-      navToggle.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', String(isOpen));
+      const isOpen = navMenu.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
+    if (navOverlay) {
+      navOverlay.addEventListener('click', closeMobileNav);
+    }
+
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        navToggle.classList.remove('open', false);
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMobileNav);
     });
+  }
+
+  // ==========================================
+  // ASTRA INNOVATIVE COSMIC BACKGROUND ENGINE
+  // Ethereal floating neural constellation & interactive mouse responsiveness
+  // ==========================================
+  function initAstraCanvas() {
+    const canvas = document.getElementById('astraCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let width = 0;
+    let height = 0;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let particles = [];
+    let animationFrameId = null;
+    let isVisible = true;
+
+    // Pointer state
+    const mouse = {
+      x: null,
+      y: null,
+      radius: 140
+    };
+
+    function resize() {
+      const hero = canvas.parentElement;
+      if (!hero) return;
+      width = hero.clientWidth;
+      height = hero.clientHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform before scaling
+      ctx.scale(dpr, dpr);
+      initParticles();
+    }
+
+    class AstraParticle {
+      constructor() {
+        this.reset(true);
+      }
+
+      reset(initial = false) {
+        this.x = initial ? Math.random() * width : (Math.random() > 0.5 ? 0 : width);
+        this.y = initial ? Math.random() * height : Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.45;
+        this.vy = (Math.random() - 0.5) * 0.45;
+        this.baseRadius = Math.random() * 1.8 + 0.8;
+        this.radius = this.baseRadius;
+        this.baseAlpha = Math.random() * 0.45 + 0.25;
+        this.alpha = this.baseAlpha;
+        this.pulseAngle = Math.random() * Math.PI * 2;
+        this.pulseSpeed = 0.02 + Math.random() * 0.02;
+
+        const rand = Math.random();
+        if (rand < 0.45) {
+          this.color = '37, 99, 235';   // Electric blue
+        } else if (rand < 0.8) {
+          this.color = '6, 182, 212';   // Cyan / Sky blue
+        } else {
+          this.color = '139, 92, 246';  // Mystical violet
+        }
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < -20) this.x = width + 20;
+        if (this.x > width + 20) this.x = -20;
+        if (this.y < -20) this.y = height + 20;
+        if (this.y > height + 20) this.y = -20;
+
+        this.pulseAngle += this.pulseSpeed;
+        this.alpha = this.baseAlpha + Math.sin(this.pulseAngle) * 0.15;
+
+        // Interactive mouse effect
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < mouse.radius) {
+            const force = (1 - dist / mouse.radius);
+            this.x -= (dx / dist) * force * 1.2;
+            this.y -= (dy / dist) * force * 1.2;
+            this.radius = this.baseRadius + force * 1.5;
+            this.alpha = Math.min(1, this.baseAlpha + force * 0.5);
+          } else {
+            this.radius = this.baseRadius;
+          }
+        }
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, Math.max(0.5, this.radius), 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${this.color}, ${Math.max(0, this.alpha)})`;
+        ctx.fill();
+
+        if (this.radius > 2) {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius * 2.2, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${this.color}, ${this.alpha * 0.18})`;
+          ctx.fill();
+        }
+      }
+    }
+
+    function initParticles() {
+      const count = width < 600 ? 35 : (width < 1024 ? 50 : 75);
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new AstraParticle());
+      }
+    }
+
+    function drawConnections() {
+      const maxDist = width < 600 ? 90 : 125;
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.hypot(dx, dy);
+
+          if (dist < maxDist) {
+            const lineAlpha = (1 - dist / maxDist) * 0.22;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.lineWidth = 0.85;
+
+            if (isLight) {
+              ctx.strokeStyle = `rgba(37, 99, 235, ${lineAlpha * 0.9})`;
+            } else {
+              ctx.strokeStyle = `rgba(56, 189, 248, ${lineAlpha})`;
+            }
+            ctx.stroke();
+          }
+        }
+
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = mouse.x - particles[i].x;
+          const dy = mouse.y - particles[i].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < mouse.radius) {
+            const lineAlpha = (1 - dist / mouse.radius) * 0.35;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(6, 182, 212, ${lineAlpha})`;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate() {
+      if (!isVisible) return;
+
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      drawConnections();
+
+      animationFrameId = requestAnimationFrame(animate);
+    }
+
+    const heroEl = canvas.parentElement;
+
+    heroEl.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+
+    heroEl.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    heroEl.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.touches[0].clientX - rect.left;
+        mouse.y = e.touches[0].clientY - rect.top;
+      }
+    }, { passive: true });
+
+    heroEl.addEventListener('touchend', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          isVisible = entry.isIntersecting;
+          if (isVisible) {
+            cancelAnimationFrame(animationFrameId);
+            animate();
+          }
+        });
+      }, { threshold: 0.05 });
+      observer.observe(heroEl);
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        resize();
+      }, 150);
+    });
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      resize();
+      particles.forEach(p => p.draw());
+      drawConnections();
+      return;
+    }
+
+    resize();
+    animate();
+  }
+
+  // Initialize Astra Canvas
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAstraCanvas);
+  } else {
+    initAstraCanvas();
   }
 
   // Scrollspy via IntersectionObserver
